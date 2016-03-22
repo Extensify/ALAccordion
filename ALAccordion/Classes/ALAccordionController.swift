@@ -333,7 +333,18 @@ public class ALAccordionController: UIViewController
     }
 
     // MARK: - Open 'n' Close Methods
-
+    
+    public func toggleSection(viewController: UIViewController) {
+        if let sectionIndex = self.sectionIndexForViewController(viewController) {
+            if self.openSectionIndex == sectionIndex {
+                self.closeSectionAtIndex(sectionIndex, animated: true)
+            }
+            else {
+                self.openSectionAtIndex(sectionIndex, animated: true)
+            }
+        }
+    }
+    
     public func openSectionAtIndex(index: Int, animated: Bool)
     {
         assert(index >= 0 && index < self.sections.count, "Section index (\(index)) out of bounds. There are only \(self.sections.count) sections")
