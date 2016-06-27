@@ -39,8 +39,8 @@ public class ALAccordionSection: NSObject
     {
         super.init()
 
-        assert(viewController is ALAccordionSectionDelegate, "View Controller \(viewController) must conform to the protocol \(String(ALAccordionSectionDelegate))")
-
+        assert(viewController is ALAccordionSectionDelegate, "View Controller \(viewController) must conform to the protocol ALAccordionSectionDelegate")
+        
         self.viewController = viewController
 
         self.sectionView.clipsToBounds = true
