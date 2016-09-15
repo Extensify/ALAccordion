@@ -53,12 +53,12 @@ class ALSeparatorView: UIView
         super.drawRect(rect)
 
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetStrokeColorWithColor(context, self.separatorColor.CGColor)
+        CGContextSetStrokeColorWithColor(context!, self.separatorColor.CGColor)
 
-        CGContextSetLineWidth(context, self.lineWidth)
-        CGContextMoveToPoint(context, 0, 0)
-        CGContextAddLineToPoint(context, rect.width, 0)
+        CGContextSetLineWidth(context!, self.lineWidth)
+        CGContextMoveToPoint(context!, 0, 0)
+        CGContextAddLineToPoint(context!, rect.width, 0)
 
-        CGContextStrokePath(context)
+        CGContextStrokePath(context!)
     }
 }
